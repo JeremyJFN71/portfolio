@@ -1,0 +1,56 @@
+:root{
+  --bg: rgb(3,40,48);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+body{
+  background-color: var(--bg);
+}
+
+textarea{
+  resize: none;
+}
+
+.hero{
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('/fdcb5aef-0cb3-471e-a0c7-64b7a3c2bdf6.jfif');
+  background-size: cover;
+  background-position: center 60%;
+  background-attachment: fixed;
+}
+
+.yea{
+  height: 110vh;
+  background: linear-gradient(to bottom, rgba(3,40,48,0) 87%, rgba(3,40,48));
+}
+
+section{
+  padding: 100px 10px;
+}
+
+.odd{
+  background-color: rgba(3,40,48);
+}
+
+.even{
+  background-color: rgb(39,91,99);
+}
+
+.fa-circle-notch{
+  animation: animate 1s ease infinite;
+}
+@keyframes animate{
+  0%{
+    transform: rotate(0turn);
+  }
+  100%{
+    transform: rotate(1turn);
+  }
+}
