@@ -22,8 +22,9 @@ app.use(bodyParser.json());
 app.use(morgan('tiny'))
 
 // Routes
-app.use('/email', emailRoutes);
+app.use('/api/emails', emailRoutes);
 
+// Run Server
 app.listen(port, () => {
     console.log(`Server running on [http://127.0.0.1:${port}]...`);
 });
