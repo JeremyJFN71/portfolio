@@ -20,7 +20,7 @@ const ContactMe = async (name, email, subject, message)=>{
                 <h2>Message: </h2>
                 <div style="border-radius: 10px; padding: 10px; background-color: white;">
                     <p style="font-size: 15px; color: black;">
-                        ${message}
+                        ${message.replace(/(?:\r\n|\r|\n)/g, '<br>')}
                     </p>
                 </div>
             </div>

@@ -1,22 +1,24 @@
 import {Schema, model} from "mongoose";
+import validator from 'validator';
 
 const emailSchema = new Schema({
     name: {
         type: String,
-        required: true,
-        minLength: 3,
+        required: 'Name is required',
+        minLength: [3, 'Name at least 3 letters'],
     },
     email: {
         type: String,
-        required: true,
+        required: 'Email address is required',
+        validate: [validator.isEmail, 'invalid email']
     },
     subject: {
         type: String,
-        required: true,
+        required: 'Subject is required',
     },
     message: {
         type: String,
-        required: true,
+        required: 'Message is required',
     }
 }, {timestamps:true, versionKey: false});
 
