@@ -18,15 +18,18 @@ export default function Contact() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
-        })
-        .then(res=>res.json())
-        .then(data=>console.log(data))
-        .catch(err=>console.log(err))
+        }).then(res=>{
+                if (res.status==200){
+                    setName('')
+                    setEmail('')
+                    setSubject('')
+                    setMessage('')
+                }
+                return res.json()
+            })
+            .then(data=>console.log(data))
+            .catch(err=>console.log(err))
         setIsLoading(false)
-        setName('')
-        setEmail('')
-        setSubject('')
-        setMessage('')
     }
 
     return (
