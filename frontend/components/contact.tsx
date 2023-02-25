@@ -12,7 +12,7 @@ export default function Contact() {
         setIsLoading(true)
         const data = {name, email, subject, message}
 
-        await fetch('https://jeremyjfn-portfolio-api.cyclic.app/api/emails', {
+        await fetch('https://127.0.0.1:3333/api/emails', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
