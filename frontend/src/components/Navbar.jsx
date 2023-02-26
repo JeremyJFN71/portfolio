@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import logo from '../assets/logo.png';
 
 export default function Navbar() {
     const [clientWindowHeight, setClientWindowHeight] = useState(0);
@@ -35,8 +36,8 @@ export default function Navbar() {
             boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,}}>
 
             <div className="container">
-                <a className="navbar-brand text-white" href="#" style={{fontSize: "25px"}}>
-                    <img src="/logo.png" alt="Logo" width="40" height="40" className="d-inline-block align-text-top" />
+                <a className="navbar-brand text-white" href="#hero" style={{fontSize: "25px"}}>
+                    <img src={logo} alt="Logo" width="40" height="40" className="d-inline-block align-text-top" />
                     Ahmad Muhajir
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

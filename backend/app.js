@@ -14,10 +14,7 @@ const app = express();
 const port = process.env.PORT || 3333;
 
 // Cors
-// app.use(cors({
-//     // origin: 'https://jeremyjfn-portfolio.netlify.app'
-//     origin: '*'
-// }));
+app.use(cors());
 
 // Set header
 app.use((req, res, next)=>{
@@ -35,6 +32,7 @@ app.use(morgan('tiny'))
 // Routes
 app.use('/api/emails', emailRoutes);
 app.use('/api/admin', adminRoutes);
+// app.use(express.static('build'));
 
 // MongoDB Connect
 mongoose.set('strictQuery', false);

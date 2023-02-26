@@ -7,7 +7,7 @@ export default function Contact() {
     const [message, setMessage] = useState('')
     const [isLoading, setIsLoading] = useState(false)
 
-    const handleSubmit = async (e:any)=>{
+    const handleSubmit = async (e)=>{
         e.preventDefault()
         setIsLoading(true)
         const data = {name, email, subject, message}
@@ -19,7 +19,7 @@ export default function Contact() {
             },
             body: JSON.stringify(data)
         }).then(res=>{
-                if (res.status==200){
+                if (res.status===200){
                     setName('')
                     setEmail('')
                     setSubject('')
