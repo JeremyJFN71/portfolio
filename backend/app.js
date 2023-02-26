@@ -14,10 +14,10 @@ const app = express();
 const port = process.env.PORT || 3333;
 
 // Cors
-app.use(cors({
-    origin: 'https://jeremyjfn-portfolio.netlify.app'
-    // origin: '*'
-}));
+// app.use(cors({
+//     // origin: 'https://jeremyjfn-portfolio.netlify.app'
+//     origin: '*'
+// }));
 
 // Set header
 app.use((req, res, next)=>{
