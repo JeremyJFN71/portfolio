@@ -1,6 +1,5 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import cors from 'cors';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import {config} from 'dotenv';
@@ -13,8 +12,7 @@ config({path:'.env'});
 const app = express();
 const port = process.env.PORT || 3333;
 
-// Cors
-app.use(cors());
+app.use(express.static('build'));
 
 // Set header
 app.use((req, res, next)=>{
@@ -32,7 +30,6 @@ app.use(morgan('tiny'))
 // Routes
 app.use('/api/emails', emailRoutes);
 app.use('/api/admin', adminRoutes);
-// app.use(express.static('build'));
 
 // MongoDB Connect
 mongoose.set('strictQuery', false);
