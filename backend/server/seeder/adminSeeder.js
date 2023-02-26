@@ -1,5 +1,6 @@
 import Admin from '../model/Admin.js';
 import bcrypt from 'bcrypt';
+config({path: '.env'})
 
 const adminSeeder = async ()=>{
     const salt = await bcrypt.genSalt(10);

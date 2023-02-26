@@ -11,12 +11,12 @@ import adminRoutes from './server/routes/adminRoutes.js';
 config({path:'.env'});
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3333;
 
 // Cors
 app.use(cors({
-    // origin: 'https://jeremyjfn-portfolio.netlify.app'
-    origin: '*'
+    origin: 'https://jeremyjfn-portfolio.netlify.app'
+    // origin: '*'
 }));
 
 // Set header

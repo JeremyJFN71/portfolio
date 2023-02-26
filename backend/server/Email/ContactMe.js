@@ -1,4 +1,6 @@
 import nodemailer from 'nodemailer';
+import { config } from 'dotenv';
+config({path: '.env'})
 
 const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
@@ -10,7 +12,7 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-const ContactMe = async (name, email, subject, message)=>{
+let ContactMe = async (name, email, subject, message)=>{
     let template = `
         <div style="background-color: rgb(3,40,48); color: white; padding: 20px; border-radius: 20px;">
             <div style="margin-bottom: 10px;">

@@ -19,7 +19,11 @@ export const sendEmail = async (req, res) => {
     }
 
     // Send Email
-    await ContactMe(data.name, data.email, data.subject, data.message);
+    try {
+        await ContactMe(data.name, data.email, data.subject, data.message);
+    } catch (err) {
+        return res.status(500).json({message: err});
+    }
 
     res.json({message: 'Email has been sent successfully', data});
 }
