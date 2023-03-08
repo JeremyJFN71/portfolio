@@ -35,11 +35,11 @@ section{
 }
 
 .odd{
-  background-color: rgba(3,40,48);
+  background-color: rgb(3, 40, 48);
 }
 
 .even{
-  background-color: rgb(39,91,99);
+  background-color: rgb(39, 91, 99);
 }
 
 .fa-circle-notch{

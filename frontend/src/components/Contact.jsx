@@ -36,7 +36,7 @@ export default function Contact() {
         <section id="contact" className="odd">
             <div className="container">
                 <div className="row">
-                    <h2 className="text-center mb-4">Contact Me</h2>
+                    <h2 className="text-center mb-5">Contact Me</h2>
                     <div className="col-lg-7 col-md-10 mx-auto">
                         <form onSubmit={handleSubmit} className="row">
                             <div className="mb-2 col-md-6">

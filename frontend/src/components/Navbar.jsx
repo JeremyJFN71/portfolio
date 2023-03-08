@@ -18,7 +18,7 @@ export default function Navbar() {
     };
 
     useEffect(() => {
-        let backgroundTransparacyVar = clientWindowHeight / 600;
+        let backgroundTransparacyVar = clientWindowHeight / 400;
 
         if (backgroundTransparacyVar < 1) {
         let paddingVar = 30 - backgroundTransparacyVar * 20;
@@ -31,7 +31,7 @@ export default function Navbar() {
 
     return (
         <nav className="navbar navbar-expand-lg fixed-top navbar-light" style={{
-            background: `rgba(3, 40, 48, ${backgroundTransparacy})`,
+            background: `rgba(1, 28, 34, ${backgroundTransparacy})`,
             padding: `${padding}px 0px`,
             boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,}}>
 

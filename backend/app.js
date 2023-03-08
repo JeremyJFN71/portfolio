@@ -3,9 +3,11 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import {config} from 'dotenv';
+// import cors from 'cors';
 
 import emailRoutes from './server/routes/emailRoutes.js';
 import adminRoutes from './server/routes/adminRoutes.js';
+import projectRoutes from './server/routes/projectRoutes.js';
 
 config({path:'.env'});
 
@@ -30,6 +32,7 @@ app.use(morgan('tiny'))
 // Routes
 app.use('/api/emails', emailRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/projects', projectRoutes);
 
 // MongoDB Connect
 mongoose.set('strictQuery', false);
