@@ -31,7 +31,6 @@ app.use(morgan('tiny'))
 
 // Routes
 app.use('/api/emails', emailRoutes);
-app.use('/api/admin', adminRoutes);
 app.use('/api/projects', projectRoutes);
 
 // Run Server

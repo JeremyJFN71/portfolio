@@ -29,13 +29,3 @@ export const allRepos = async (req, res)=>{
 
     res.json(repos);
 }
-
-export const singleRepo = async (req, res)=>{
-    const username = process.env.GITHUB_USERNAME;
-    const param = req.params.slug;
-
-    await fetch(`https://api.github.com/repos/${username}/${param}`)
-        .then(resp=>resp.json())
-        .then(data=>res.json(data))
-        .catch(err=>res.status(500).json({message: err.message}));
-}
