@@ -1,7 +1,11 @@
-import { useEffect, useState } from "react"
 import Slider from "react-slick";
+import { useState } from "react";
+
+import ModalImage from "./ModalImage";
 
 export default function SliderPr(props) {
+    const [image, setImage] = useState('');
+
     const settings = {
         dots: true,
         infinite: true,
@@ -31,26 +35,30 @@ export default function SliderPr(props) {
     };
 
     return (
-        <Slider {...settings} className="">
-            {props.projects.map((item, index)=>{
-                if(item.fork===false && item.name!=='JeremyJFN71'){
-                    return (
-                        <div key={index} className="p-2 text-center">
-                            <div className="card odd p-2">
-                                {item.owner.login!=='JeremyJFN71' && <span className="px-2 py-0" style={{position: 'absolute', borderRadius: '10px', top: '15px', left: '15px', background: 'rgba(255,255,255,0.2)'}}>
-                                    <i className="fa-solid fa-user-group text-success"></i> Collab
-                                </span>}
-                                <img src="https://dummyimage.com/1280x720/000/fff" alt="" />
-                                <h5 className="my-3 fw-bold">{item.name}</h5>
-                                <p className="mb-3">{item.description}</p>
-                                <a href={item.html_url} className="btn btn-success mt-auto" target="_blank" rel="noreferrer">See Detail</a>
+        <>
+            <Slider {...settings}>
+                {props.projects.map((item, index)=>{
+                    if(item.fork===false && item.name!=='JeremyJFN71'){
+                        return (
+                            <div key={index} className="p-2 text-center">
+                                <div className="card odd p-2" style={{height: '350px'}}>
+                                    {item.owner.login!=='JeremyJFN71' && <span className="px-2 py-0 text-success tag">
+                                        <i className="fa-solid fa-user-group text-success"></i> Collab
+                                    </span>}
+                                    <img src={item.image} alt="" className="project-image" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>setImage(item.image)} />
+                                    <h5 className="my-3 fw-bold">{item.name}</h5>
+                                    <p className="mb-3">{item.description}</p>
+                                    <a href={item.html_url} className="btn btn-success mt-auto" target="_blank" rel="noreferrer">See Detail</a>
+                                </div>
                             </div>
-                        </div>
-                    )
-                } else {
-                    return ''
-                }
-            })}
-        </Slider>
+                        )
+                    } else {
+                        return ''
+                    }
+                })}
+            </Slider>
+
+            <ModalImage image={image} />
+        </>
     )
 }

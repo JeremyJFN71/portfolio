@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 
-import Loading from "./Loading";
-import Error from "./Error";
-import SliderPr from "./SliderPr";
+import Loading from "../components/Loading";
+import Error from "../components/Error";
+import SliderPr from "../components/SliderPr";
 
 export default function Project() {
     const [projects, setProjects] = useState([]);
@@ -23,7 +23,7 @@ export default function Project() {
                     setProjects(data);
                     setIsLoading(false);
                 })
-                .catch(err=>{
+                .catch(()=>{
                     setIsError(true);
                     setIsLoading(false);
                 });
@@ -44,7 +44,7 @@ export default function Project() {
     return (
         <section id="project" className="even">
             <div className="container">
-                <h2 className="text-center mb-5">Project</h2>
+                <h1 className="text-center mb-5">Project</h1>
 
                 {content}
 

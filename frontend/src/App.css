@@ -7,6 +7,7 @@
   padding: 0;
   margin: 0;
   color: white;
+  font-family: sans-serif;
 }
 
 body{
@@ -15,6 +16,10 @@ body{
 
 textarea{
   resize: none;
+}
+
+h1{
+  font-weight: bold;
 }
 
 .hero{
@@ -52,4 +57,20 @@ section{
   100%{
     transform: rotate(1turn);
   }
+}
+
+.project-image{
+  aspect-ratio: 2/1;
+  object-fit: cover;
+  object-position: center 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tag{
+  position: absolute;
+  border-radius: 10px;
+  top: 15px;
+  left: 15px;
+  background: rgba(0,0,0,0.2)
 }

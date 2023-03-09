@@ -1,14 +1,22 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
+
+import Navbar from "./components/Navbar";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Project from "./sections/Project";
+import Contact from "./sections/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <Navbar />
+      <Hero />
+      <About />
+      <Project />
+      <Contact />
+      <Footer />
+    </>
   );
 }
 
