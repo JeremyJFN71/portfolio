@@ -7,7 +7,7 @@ export default function Footer() {
                         <a href="/" className="text-decoration-none">
                             <img src="{% static 'img/logo.png' %}" alt="" width="30px" />
                         </a>
-                        <span><sup><i class="fa-regular fa-copyright"></i></sup>Copyright 2022 | Created and Developed by <a href="https://www.linkedin.com/in/ahmad-muhajir-syamlan/" className="text-decoration-none fw-bold text-white">Ahmad Muhajir</a></span>
+                        <span><sup><i className="fa-regular fa-copyright"></i></sup>Copyright 2022 | Created and Developed by <a href="https://www.linkedin.com/in/ahmad-muhajir-syamlan/" className="text-decoration-none fw-bold text-white">Ahmad Muhajir</a></span>
                     </div>
 
                     <div className="col-md-6 text-end">

@@ -25,6 +25,7 @@ app.use((req, res, next)=>{
 
 // BodyParser
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 // Log
 app.use(morgan('tiny'))
@@ -41,9 +42,9 @@ mongoose.connect(process.env.DB_URI);
 const DB = mongoose.connection;
 DB.on('open', ()=>{
     console.log('Database Connected');
-    // Run Server
-    app.listen(port, () => {
-        console.log(`Server running on [http://127.0.0.1:${port}]...`);
-    });
 });
 DB.on('close', ()=>console.log('Database Disconnected'))
+// Run Server
+app.listen(port, () => {
+    console.log(`Server running on [http://127.0.0.1:${port}]...`);
+});
