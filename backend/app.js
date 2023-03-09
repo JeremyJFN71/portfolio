@@ -6,7 +6,6 @@ import './server/database/connection.js'
 // import cors from 'cors';
 
 import emailRoutes from './server/routes/emailRoutes.js';
-import adminRoutes from './server/routes/adminRoutes.js';
 import projectRoutes from './server/routes/projectRoutes.js';
 
 config({path:'.env'});

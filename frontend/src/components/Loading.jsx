@@ -32,8 +32,8 @@ export default function Loading() {
 
     return (
         <Slider {...settings}>
-            {count.map(()=>(
-                <div className="p-2 text-center">
+            {count.map((v)=>(
+                <div key={v} className="p-2 text-center">
                     <div className="card odd p-2" style={{height: '350px'}}>
                         <div className="project-image" style={{background: 'rgb(175,175,175)', cursor: 'default'}}></div>
                         <h5 className="my-3 fw-bold placeholder-glow">
