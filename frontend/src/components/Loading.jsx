@@ -34,7 +34,7 @@ export default function Loading() {
         <Slider {...settings}>
             {count.map((v)=>(
                 <div key={v} className="p-2 text-center">
-                    <div className="card odd p-2" style={{height: '350px'}}>
+                    <div className="card odd border-0" style={{height: '350px'}}>
                         <div className="project-image" style={{background: 'rgb(175,175,175)', cursor: 'default'}}></div>
                         <h5 className="my-3 fw-bold placeholder-glow">
                             <span className="placeholder col-4 me-1"></span>
@@ -47,7 +47,7 @@ export default function Loading() {
                             <span className="placeholder col-1 me-1"></span>
                             <span className="placeholder col-3"></span>
                         </p>
-                        <a href="/" className="btn btn-success mt-auto disabled" target="_blank" rel="noreferrer">&nbsp;</a>
+                        <a href="/" className="btn btn-success mt-auto mx-2 mb-2 disabled" target="_blank" rel="noreferrer">&nbsp;</a>
                     </div>
                 </div>
             ))}

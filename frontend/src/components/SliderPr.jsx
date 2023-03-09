@@ -41,14 +41,14 @@ export default function SliderPr(props) {
                     if(item.fork===false && item.name!=='JeremyJFN71'){
                         return (
                             <div key={index} className="p-2 text-center">
-                                <div className="card odd p-2" style={{height: '350px'}}>
-                                    {item.owner.login!=='JeremyJFN71' && <span className="px-2 py-0 text-success tag">
-                                        <i className="fa-solid fa-user-group text-success"></i> Collab
+                                <div className="card odd border-0" style={{height: '350px'}}>
+                                    {item.owner.login!=='JeremyJFN71' && <span className="px-2 py-1 text-white tag">
+                                        <i className="fa-solid fa-user-group text-white"></i> Collab
                                     </span>}
                                     <img src={item.image} alt="" className="project-image" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>setImage(item.image)} />
                                     <h5 className="my-3 fw-bold">{item.name}</h5>
                                     <p className="mb-3">{item.description}</p>
-                                    <a href={item.html_url} className="btn btn-success mt-auto" target="_blank" rel="noreferrer">See Detail</a>
+                                    <a href={item.html_url} className="btn btn-success mt-auto mx-2 mb-2" target="_blank" rel="noreferrer">See Detail</a>
                                 </div>
                             </div>
                         )
